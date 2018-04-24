@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>click demo</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //.click
+            $('button#clickButton').click(function () {
+                alert('this was done using .click')
+            });
+
+            //.hide
+            $('button#hideButton').click(function () {
+                $('h2.headhide').hide("slow") //instead of slow 300 (ms)
+            });
+
+            //.show
+            $('button#showButton').click(function () {
+                $('h2.headhide').show('slow')
+            })
+
+            //.toggle
+            $('button#toggleButton').click(function(){
+                $('p#alt').toggle(300)
+            })
+
+            //.slideDown
+            $('button#slideDownButton').click(function(){
+                $('img.img_polar_down').slideDown(300)
+            })
+
+            //.slideUp
+            $('button#slideUpButton').click(function(){
+                $('img.smallpic').slideUp(400)
+            })
+
+            //.slideToggle
+            $('button#slideToggleButton').click(function(){
+                $('h2.toggleh2').slideToggle(300)
+            })
+
+            //.fadeIn
+            $('button#fadeInButton').click(function(){
+                $('p.hidep').fadeIn(600)
+            })
+
+            //.fadeOut
+            $('button#fadeOutButton').click(function(){
+                $('h2.fadeOutH2').fadeOut(500)
+            })
+
+            //.addClass
+            $('button#addClassButton').click(function(){
+                $('h2.addhere').addClass('addclass')
+            })
+
+            //.before
+            $('button#beforeButton').click(function(){
+                $('p.before').before("<p>i just added this before the original </p>")
+            })
+
+            //.after
+            $('button#afterButton').click(function(){
+                $('p.after').after("<p>i just added this AFTER the original </p>")
+            })
+
+            //.append
+            $('button#appendButton').click(function(){
+                $('p.append').append(" - i could append code into html too!")
+            })
+
+            //.html
+            $('button#htmlButton').click(function(){
+                $('div.html').html('<p>All new content. <em>You bet!</em></p>')
+            })
+
+            //.attr
+
+            //.val
+
+            //.text
+
+            //.data
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Assignment: jQuery Functions</h1>
+        <!-- .click -->
+        <div>
+            <h2>.click</h2>
+            <p>click to pop an alert() message </p>
+            <button id='clickButton'>Click</button>
+        </div>
+        <!-- .hide -->
+        <div>
+            <h2 class='headhide'>.hide</h2>
+            <p>click to hide the headline ".hide" with 300 duration</p>
+            <button id='hideButton'>this is </button>
+        </div>
+        <!-- .show -->
+        <div>
+            <h2>.show</h2>
+            <p>click to show the previous headline</p>
+            <button id='showButton'>this is </button>
+        </div>
+        <!-- .toggle -->
+        <div>
+            <h2>.toggle</h2>
+            <p id='alt'>toggle to change this text</p>
+            <p id='alt' style="display: none">click to GO back to the previous!!!!!</p>
+            <button id='toggleButton'>click </button>
+        </div>
+        <!-- .slideDown -->
+        <div>
+            <h2>.slideDown</h2>
+            <p>suprize!!!! </p>
+            <button id='slideDownButton'>this is </button>
+            <img class='img_polar_down' src="images/polar.png" alt='img of a polar bear'>
+        </div>
+        <!-- .slideUp -->
+        <div>
+            <h2>.slideUp</h2>
+            <p>ok, now go back! </p>
+            <button id='slideUpButton'>this is </button>
+            <img class='smallpic' src="images/smallpic.png" alt='img of a polar bear'>
+
+        </div>
+        <!-- .slideToggle -->
+        <div>
+            <h2 class='toggleh2'>.slideToggle</h2>
+            <p>showing .click</p>
+            <button id='slideToggleButton'>this is </button>
+        </div>
+        <!-- .fadeIn -->
+        <div>
+            <h2>.fadeIn</h2>
+            <p>showing .click</p>
+            <p class = 'hidep'> this just faded in</p>
+            <button id='fadeInButton'>this is </button>
+        </div>
+        <!-- .fadeOut -->
+        <div>
+            <h2 class='fadeOutH2'>.fadeOut</h2>
+            <p>showing .click</p>
+            <button id='fadeOutButton'>this is </button>
+        </div>
+        <!-- .addClass -->
+        <div>
+            <h2 class='addhere'>.addClass</h2>
+            <p>showing .click</p>
+            <button id='addClassButton'>this is </button>
+        </div>
+        <!-- .before -->
+        <div>
+            <h2>.before</h2>
+            <p class='before'>showing .click</p>
+            <button id='beforeButton'>this is </button>
+        </div>
+        <!-- .after -->
+        <div>
+            <h2>.after</h2>
+            <p class='after'>showing .click</p>
+            <button id='afterButton'>this is </button>
+        </div>
+        <!-- .append -->
+        <div>
+            <h2>.append</h2>
+            <p class='append'>showing .click</p>
+            <button id='appendButton'>this is </button>
+        </div>
+        <!-- .html -->
+        <div class='html'>
+            <h2>.html</h2>
+            <p>showing .click</p>
+            <button id='htmlButton'>this is </button>
+        </div>
+        <!-- .attr -->
+        <div>
+            <h2>.attr</h2>
+            <p>showing .click</p>
+            <button id='alertButton'>this is </button>
+        </div>
+        <!-- .val -->
+        <div>
+            <h2>.val</h2>
+            <p>showing .click</p>
+            <button id='alertButton'>this is </button>
+        </div>
+        <!-- .text -->
+        <div>
+            <h2>.text</h2>
+            <p>showing .click</p>
+            <button id='alertButton'>this is </button>
+        </div>
+        <!-- .data -->
+        <div>
+            <h2>.data</h2>
+            <p>showing .click</p>
+            <button id='alertButton'>this is </button>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
